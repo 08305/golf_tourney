@@ -1,0 +1,7 @@
+Hey <%= @player.playername%>. Nothing here to show yet. Just getting started. Cheers.
+You are
+<% if @player.is_admin? %>
+  an admin! hooray!
+<% else %>
+ not an admin :( sorry
+ <%end%>
