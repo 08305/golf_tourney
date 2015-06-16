@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require underscore
+//= require bootstrap-sprockets
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/golf_tournament
 //= require_tree .

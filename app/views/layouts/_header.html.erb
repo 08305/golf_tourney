@@ -1,25 +1,20 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 <div class="container container-fluid">
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">nothing here yet</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">hey marshall, maybe dc. probably virus.</a>
+    <a class="navbar-brand" href="#">Tournament name</a>
   </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav header-list">
+      <li><a class="navbar-brand glyphicon glyphicon-home" href="#"></a></li>
+      <li><a class="navbar-brand" href="#">Players Link</a></li>
+      <li><a class="navbar-brand" href="#">Tee Times Link</a></li>
+      <li><a class="navbar-brand" href="#">Leaderboard Link</a></li>
+    </ul>
     <% if signed_in? %>
-      <li id='add-dropdown' class='dropdown'>
-        <button
-          class='dropdown-toggle navbar-btn btn btn-primary'
-          data-toggle='dropdown'><span class='glyphicon glyphicon-plus'></span>
-        </button>
-      </li>
-      <li><%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %></li>
+      <div class='sign-out'>
+        <li><%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %></li>
+      </div>
     <% else %>
       <li><%= link_to "Log in", new_session_url %></li>
       <li><%= link_to "Sign up", new_player_url %></li>
